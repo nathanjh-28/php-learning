@@ -1,7 +1,11 @@
 <?php
 
-$greeting = 'Hello Nathannn';
+require 'Task.php';
+require 'functions.php';
 
-$names = ['Jeff','John','Mary'];
+$pdo = connectToDb();
+$tasks = fetchAllTasks($pdo);
+
+//var_dump($tasks);
 
 require 'index.view.php';
