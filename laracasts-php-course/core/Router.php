@@ -2,6 +2,12 @@
 
 class Router {
     protected $routes = [];
+// New Stuff Here
+    public static function load($file){
+        $router = new static;
+        require $file;
+        return $router;
+    } // __end new stuff
     public function define($routes){
         $this->routes = $routes;
     }
